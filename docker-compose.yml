@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # O simulador da AWS
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"            # Porta padrão da AWS local
+    environment:
+      - SERVICES=dynamodb      # Vamos simular apenas o banco por enquanto
+    volumes:
+      - "./infra:/etc/localstack/init/ready.d" # Scripts de inicialização
+
+  # Sua API Backend
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - AWS_DEFAULT_REGION=us-east-1
+      - DYNAMODB_URL=http://localstack:4566
+    depends_on:
+      - localstack
