@@ -1,8 +1,3 @@
-Consultoria de carreira
-Consultoria de carreira disse
-Aqui está o conteúdo para o seu arquivo README.md formatado de maneira técnica e profissional, focado exatamente no que gestores de Backend e DevOps procuram.
-
-Plaintext
 # Backend Lead Capture - AWS LocalStack Integration
 
 Este projeto consiste em uma infraestrutura de backend para captura de dados, integrando uma interface frontend a uma API RESTful conteinerizada que utiliza serviços de nuvem simulados.
