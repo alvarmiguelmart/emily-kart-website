@@ -2,6 +2,4 @@
 
 Landing page estatica em HTML e CSS.
 
-## Como abrir
-
-Abra o arquivo `index.html` no navegador.
+https://github.com/alvarmiguelmart/emily-kart-website.git
